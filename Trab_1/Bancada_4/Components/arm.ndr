@@ -1,0 +1,19 @@
+p 375.0 115.0 {S. Activated Pushed} 0 e
+t 320.0 50.0 {Activate Push S.} n 0 w n {} ne
+t 315.0 180.0 {Pull Arm} s 0 w n {} ne
+t 165.0 180.0 {Activate Pull S.} s 0 w n {} ne
+p 120.0 115.0 {Arm S. Pulled} 1 w
+t 165.0 50.0 {Push Arm} n 0 w n {} ne
+p 245.0 180.0 {Arm Pulling} 0 n
+p 245.0 50.0 {Arm Pushing} 0 s
+e {Activate Pull S.} {Arm S. Pulled} 1 n
+e {Arm S. Pulled} {Push Arm} 1 n
+e {Push Arm} {Arm Pushing} 1 n
+e {Arm Pushing} {Activate Push S.} 1 n
+e {Activate Push S.} {S. Activated Pushed} 1 n
+e {S. Activated Pushed} {Pull Arm} 1 n
+e {Pull Arm} {Arm Pulling} 1 n
+e {Arm Pulling} {Activate Pull S.} 1 n
+h arm
+
+

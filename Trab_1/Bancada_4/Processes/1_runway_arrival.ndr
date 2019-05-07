@@ -1,0 +1,35 @@
+p 190.0 140.0 {Piece Entered} 0 nw
+t 390.0 345.0 {Wait for runway deactivation} n 1 1 s {} ne
+p 590.0 140.0 {Piece arriving at Lock} 0 s
+t 670.0 140.0 {Activate Lock} e 0 0 n {} ne
+t 185.0 345.0 {Deactivate Runway} n 0 0 w {} ne
+p 275.0 345.0 {Piece at Lock} 0 s
+t 190.0 50.0 {Activate Entry S.} n 0 w n {} ne
+t 270.0 140.0 {Activate Runway} n 0 w n {} ne
+p 390.0 140.0 {Runway Activated with Piece} 0 s
+t 505.0 140.0 {Activate S. Lock} n 0 w n {} ne
+p 340.0 50.0 {Previous Process OK} 0 n
+p 670.0 345.0 {Lock ready for Piece} 0 e
+t 595.0 345.0 {Deactivate S. Lock} n 0 w n {} ne
+p 505.0 345.0 {Piece close to Lock} 0 s
+p 185.0 425.0 {Piece ready for Process 2} 0 w
+t 390.0 425.0 {Go to Process 2} s 0 0 e {} ne
+e {Deactivate Runway} {Piece ready for Process 2} 1 n
+e {Piece ready for Process 2} {Go to Process 2} 1 n
+e {Piece at Lock} {Activate Runway} ?-1 n
+e {Piece at Lock} {Deactivate Runway} 1 n
+e {Wait for runway deactivation} {Piece at Lock} 1 n
+e {Piece close to Lock} {Wait for runway deactivation} 1 n
+e {Deactivate S. Lock} {Piece close to Lock} 1 n
+e {Lock ready for Piece} {Deactivate S. Lock} 1 n
+e {Activate Lock} {Lock ready for Piece} 1 n
+e {Piece arriving at Lock} {Activate Lock} 1 n
+e {Activate S. Lock} {Piece arriving at Lock} 1 n
+e {Runway Activated with Piece} {Activate S. Lock} 1 n
+e {Activate Runway} {Runway Activated with Piece} 1 n
+e {Piece Entered} {Activate Runway} 1 n
+e {Activate Entry S.} {Piece Entered} 1 n
+e {Previous Process OK} {Activate Entry S.} 1 n
+h 1_runway_arrival
+
+

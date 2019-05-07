@@ -1,0 +1,19 @@
+t 200.0 50.0 {Raise Elevator} n 0 w n {} ne
+t 200.0 180.0 {Activate Down S.} s 0 w n {} ne
+p 145.0 115.0 {Down S. Activated} 0 w
+t 370.0 180.0 {Lower Elevator} s 0 w n {} ne
+t 375.0 50.0 {Activate Up S.} n 0 w n {} ne
+p 425.0 110.0 {Up S. Activated} 0 e
+p 280.0 50.0 {Elevator Raising} 0 s
+p 280.0 180.0 {Elevator Lowering} 0 n
+e {Activate Down S.} {Down S. Activated} 1 n
+e {Down S. Activated} {Raise Elevator} 1 n
+e {Raise Elevator} {Elevator Raising} 1 n
+e {Elevator Raising} {Activate Up S.} 1 n
+e {Activate Up S.} {Up S. Activated} 1 n
+e {Up S. Activated} {Lower Elevator} 1 n
+e {Lower Elevator} {Elevator Lowering} 1 n
+e {Elevator Lowering} {Activate Down S.} 1 n
+h elevator
+
+

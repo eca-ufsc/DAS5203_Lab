@@ -1,0 +1,11 @@
+t 240.0 50.0 {Activate Vacuum} n 0 w n {} ne
+t 245.0 210.0 {Deactivate Vacuum} s 0 w n {} ne
+p 405.0 120.0 {Vacuum Activated} 0 n
+p 70.0 120.0 {Vacuum Deactivated} 1 n
+e {Vacuum Deactivated} {Activate Vacuum} 1 n
+e {Activate Vacuum} {Vacuum Activated} 1 n
+e {Vacuum Activated} {Deactivate Vacuum} 1 n
+e {Deactivate Vacuum} {Vacuum Deactivated} 1 n
+h vacuum
+
+

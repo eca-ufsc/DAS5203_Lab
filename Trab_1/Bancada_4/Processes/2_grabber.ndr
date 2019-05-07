@@ -1,0 +1,48 @@
+t 310.0 55.0 {Lower Elevator without piece} n 0 0 s {} ne
+p 210.0 55.0 {Process 1 OK} 0 w
+p 430.0 55.0 {Lowering Elevator without Piece} 0 s
+t 550.0 50.0 {Activate Vacuum} n 0 0 se {} ne
+p 690.0 65.0 {Waiting for reaching bottom} 0 n
+t 680.0 155.0 {Activate Vacuum S.} s 0 w n {} ne
+p 575.0 160.0 {Cover captured} 0 n
+t 455.0 170.0 {Activate Down S.} n 0 0 s {} ne
+p 330.0 170.0 {Elevator Down} 0 n
+t 210.0 165.0 {Raise Elevator} n 0 0 w {} ne
+t 455.0 280.0 {Push Arm} n 0 w n {} ne
+p 350.0 280.0 {Elevator Pulled Up with Piece} 0 s
+t 270.0 275.0 {Activate Up S.} n 0 w n {} ne
+p 195.0 265.0 {Elevator Raising with Piece} 0 w
+p 565.0 270.0 {Arm pushing with Piece} 0 n
+t 685.0 270.0 {Activate Push S.} e 0 w n {} ne
+p 680.0 395.0 {Arm pushed with Piece} 0 e
+t 470.0 390.0 t9 n 0 w n {} ne
+p 325.0 400.0 p8 0 n
+t 225.0 395.0 t10 e 0 w n {} ne
+t 1160.0 155.0 {Lower Elevator} w 0 w n {} ne
+p 150.0 405.0 p9 0 n
+p 255.0 500.0 p10 0 n
+e {Arm pushed with Piece} {Lower Elevator} 1 n
+e {Lowering Elevator without Piece} {Lower Elevator} 1 n
+e t10 p9 1 n
+e p8 t10 1 n
+e t9 p8 1 n
+e {Arm pushed with Piece} t9 1 n
+e {Activate Push S.} {Arm pushed with Piece} 1 n
+e {Arm pushing with Piece} {Activate Push S.} 1 n
+e {Push Arm} {Arm pushing with Piece} 1 n
+e {Elevator Pulled Up with Piece} {Push Arm} 1 n
+e {Activate Up S.} {Elevator Pulled Up with Piece} 1 n
+e {Elevator Raising with Piece} {Activate Up S.} 1 n
+e {Raise Elevator} {Elevator Raising with Piece} 1 n
+e {Elevator Down} {Raise Elevator} 1 n
+e {Activate Down S.} {Elevator Down} 1 n
+e {Cover captured} {Activate Down S.} 1 n
+e {Activate Vacuum S.} {Cover captured} 1 n
+e {Waiting for reaching bottom} {Activate Vacuum S.} 1 n
+e {Activate Vacuum} {Waiting for reaching bottom} 1 n
+e {Lowering Elevator without Piece} {Activate Vacuum} 1 n
+e {Lower Elevator without piece} {Lowering Elevator without Piece} 1 n
+e {Process 1 OK} {Lower Elevator without piece} 1 n
+h 2_grabber
+
+

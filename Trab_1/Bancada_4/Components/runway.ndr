@@ -1,0 +1,11 @@
+p 70.0 120.0 {Runway Deactivated} 0 n
+t 205.0 200.0 {Deacvtivate Runway} s 0 w n {} ne
+t 205.0 50.0 {Activate Runway} n 0 w n {} ne
+p 325.0 120.0 {Runway Activated} 0 e
+e {Runway Deactivated} {Activate Runway} 1 n
+e {Activate Runway} {Runway Activated} 1 n
+e {Runway Activated} {Deacvtivate Runway} 1 n
+e {Deacvtivate Runway} {Runway Deactivated} 1 n
+h runway
+
+

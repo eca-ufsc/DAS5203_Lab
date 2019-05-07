@@ -1,0 +1,110 @@
+t 95.0 405.0 {Ativ Est} w 0 w n {} ne
+p 255.0 345.0 Andando 0 s
+t 560.0 580.0 Travar e 0 w n {} ne
+t 385.0 500.0 Destravar w 0 w n {} ne
+p 560.0 680.0 {S Trava Desat} 1 e
+p 385.0 680.0 {S Trava Ativ} 0 w
+t 475.0 740.0 {Entra Peça S Trava} s 0 w n {} ne
+p 515.0 405.0 Parado 1 s
+p 965.0 405.0 {S Elev Baixo} 0 s
+t 420.0 345.0 {Desat Est} nw 1 w ne {} ne
+p 745.0 345.0 {S Elev Cima} 1 w
+p 1105.0 540.0 {Peça Pronta} 0 e
+p 965.0 195.0 Pegado 0 n
+p 655.0 275.0 {S Braço Puxado} 1 w
+t 745.0 195.0 Empurrar n 0 w n {} ne
+t 1030.0 195.0 {S Pegou Tampa} e 0 w n {} ne
+p 1030.0 140.0 {N Pegado} 1 n
+t 1220.0 140.0 {Para Sugador} n 0 w n {} ne
+t 860.0 345.0 {Elev Chega Topo} n 0 w n {} ne
+p 95.0 325.0 {S Ent Ativ} 0 w
+t 95.0 240.0 {Entra Peça Entrada} n 0 w n {} ne
+t 515.0 50.0 {Braço Chega na Frente} w 0 w n {} ne
+p 655.0 50.0 {S Braço Empurrado} 0 n
+p 560.0 500.0 Travado 0 sw
+p 735.0 500.0 {Elev Descendo} 0 s
+p 1130.0 235.0 Sugando 0 e
+t 1040.0 275.0 {Ativa Sugador} e 0 w n {} ne
+p 860.0 240.0 {Elev Subindo} 0 n
+p 515.0 195.0 Empurrando 0 n
+t 655.0 110.0 {Braço Chega Atrás} w 0 w n {} ne
+t 210.0 240.0 {Sai Peça Entrada} e 0 w n {} ne
+p 210.0 195.0 {Pode entrar peça} 1 n
+p 385.0 580.0 Destravado 1 w
+t 655.0 405.0 {Descer Elev s/ Tampa} e 0 w n {} ne
+p 1095.0 370.0 {N/ Sugando} 1 s
+t 845.0 405.0 {Elev Chega baixo} s 0 w n {} ne
+t 860.0 95.0 {Desce Elev c/ Tampa} n 0 w n {} ne
+t 965.0 250.0 {Subir Elev} e 0 w n {} ne
+e Empurrando {Braço Chega na Frente} 1 n
+e Empurrar Empurrando 1 n
+e {Descer Elev s/ Tampa} Parado 1 n
+e {Desce Elev c/ Tampa} {Elev Descendo} 1 n
+e {Elev Subindo} {Elev Chega Topo} 1 n
+e {Subir Elev} {Elev Subindo} 1 n
+e {Elev Descendo} {Elev Chega baixo} 1 n
+e {Descer Elev s/ Tampa} {Elev Descendo} 1 n
+e Empurrar {S Elev Cima} 1 n
+e {S Braço Empurrado} 0.009351279633 142.2478625 {Para Sugador} 0.427461354 142.3312222 1 n
+e {Ativ Est} Destravado 1 n
+e Destravado {Ativ Est} 1 n
+e {Desce Elev c/ Tampa} {S Braço Empurrado} 1 n
+e {S Elev Baixo} {Subir Elev} 1 n
+e {S Elev Baixo} 0.9435312335 295.742758 {Para Sugador} 0.9159095758 213.7507847 1 n
+e {Para Sugador} 0.9148395203 214.5978162 {S Elev Baixo} 0.9435312335 295.742758 1 n
+e {Para Sugador} 0.7600235272 92.90339838 {N/ Sugando} 0.0317419478 80.10688598 1 n
+e {N/ Sugando} {Ativa Sugador} 1 n
+e {Peça Pronta} 0.654483107 362.3630175 Destravar 0.6069462603 469.6334245 1 n
+e {Descer Elev s/ Tampa} Travado 1 n
+e {Braço Chega na Frente} {S Braço Empurrado} 1 n
+e {Subir Elev} Pegado 1 n
+e Pegado {Subir Elev} 1 n
+e {S Elev Cima} Empurrar 1 n
+e {Para Sugador} 0.9539083566 172.577587 {Peça Pronta} 0.1221750595 199.6718642 1 n
+e {Ativa Sugador} {S Elev Baixo} 1 n
+e {Ativa Sugador} {S Braço Puxado} 1 n
+e {Descer Elev s/ Tampa} {S Braço Puxado} 1 n
+e {Elev Chega baixo} {S Elev Baixo} 1 n
+e {Elev Chega Topo} {S Elev Cima} 1 n
+e {S Braço Empurrado} {Desce Elev c/ Tampa} 1 n
+e {S Braço Puxado} {Descer Elev s/ Tampa} 1 n
+e {S Braço Puxado} Empurrar 1 n
+e {Braço Chega Atrás} {S Braço Puxado} 1 n
+e {S Braço Puxado} {Ativa Sugador} 1 n
+e Pegado Empurrar 1 n
+e Empurrar Pegado 1 n
+e {S Braço Empurrado} {Braço Chega Atrás} 1 n
+e {Para Sugador} {N Pegado} 1 n
+e Sugando {S Pegou Tampa} 1 n
+e Parado {Ativ Est} 1 n
+e Andando {Desat Est} 1 n
+e Parado {Descer Elev s/ Tampa} 1 n
+e Travado {Descer Elev s/ Tampa} 1 n
+e {S Elev Cima} {Descer Elev s/ Tampa} 1 n
+e {S Elev Baixo} {Ativa Sugador} 1 n
+e {Ativa Sugador} Sugando 1 n
+e {S Pegou Tampa} Pegado 1 n
+e {N Pegado} {S Pegou Tampa} 1 n
+e Pegado {Desce Elev c/ Tampa} 1 n
+e {S Trava Ativ} Travar 1 n
+e {Entra Peça Entrada} {S Ent Ativ} 1 n
+e {S Ent Ativ} {Ativ Est} 1 n
+e {Ativ Est} Andando 1 n
+e {S Trava Desat} {Entra Peça S Trava} 1 n
+e {Entra Peça S Trava} {S Trava Ativ} 1 n
+e Travar {S Trava Desat} 1 n
+e Destravar Destravado 1 n
+e Destravado Travar 1 n
+e Travar Travado 1 n
+e Travado Destravar 1 n
+e Travado {Desat Est} 1 n
+e {Desat Est} Travado 1 n
+e {Desat Est} Parado 1 n
+e Travado {Ativ Est} ?-1 n
+e {Ativ Est} {S Ent Ativ} 1 n
+e {S Ent Ativ} {Sai Peça Entrada} 1 n
+e {Sai Peça Entrada} {Pode entrar peça} 1 n
+e {Pode entrar peça} {Entra Peça Entrada} 1 n
+h complete_system
+
+

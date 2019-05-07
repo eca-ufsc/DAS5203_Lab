@@ -1,0 +1,11 @@
+t 255.0 50.0 {Activate Transmitter S.} n 0 w n {} ne
+t 260.0 210.0 {Receiver Transmitter S.} s 0 w n {} ne
+p 420.0 120.0 {Transmitter S. Activated} 0 n
+p 85.0 120.0 {Transmitter S. Deactivated} 1 n
+e {Transmitter S. Deactivated} {Activate Transmitter S.} 1 n
+e {Activate Transmitter S.} {Transmitter S. Activated} 1 n
+e {Transmitter S. Activated} {Receiver Transmitter S.} 1 n
+e {Receiver Transmitter S.} {Transmitter S. Deactivated} 1 n
+h transmitter_sensor
+
+
